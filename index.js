@@ -84,7 +84,7 @@ module.exports = (function() {
 	function HandleArpDetected(mac) {
 		let button = buttons.find(b => b.mac_address === mac);
 		if (button) {
-			if (console.debug) {
+			if (config.debug) {
 				console.log(Timestamp(), `Detected ${button.name} via ARP/UDP`);
 			}
 			button.callback(button);
@@ -102,7 +102,7 @@ module.exports = (function() {
 
 		process.on('close', function(code) {
 			// If the process was up for less than 5 seconds, show some info for troubleshooting
-			if (console.debug || processStartTime - new Date() <= 5000) {
+			if (config.debug || processStartTime - new Date() <= 5000) {
 				console.log();
 				console.log(Timestamp(), 'Monitor process ended! Button presses will not be detected. Code: ' + code);
 				console.log();
