@@ -64,19 +64,15 @@ module.exports = (function() {
 		lines = lines.filter(l => l.length > 0);
 
 		lines.forEach(line => {
-			// Make sure we only have a MAC address
-			let macMatches = /([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})/.exec(line);
-			if (macMatches != null && macMatches.length > 1) {
-				// See if an of our buttons have this MAC address
-				let button = buttons.find(b => b.mac_address.toLowerCase() === macMatches[1].toLowerCase());
+			// See if an of our buttons have this MAC address
+			let button = buttons.find(b => b.mac_address.toLowerCase() === line.toLowerCase());
 
-				if (button) {
-					// Button press detected!
-					if (config.debug) {
-						console.log(Timestamp(), `Detected ${button.name} via Tshark`);
-					}
-					button.callback(button);
+			if (button) {
+				// Button press detected!
+				if (config.debug) {
+					console.log(Timestamp(), `Detected ${button.name} via Tshark`);
 				}
+				button.callback(button);
 			}
 		});
 	}

@@ -1,6 +1,6 @@
 {
   "name": "node-dash-button-mon",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Uses a WiFi interface in monitor mode to listen to dash button presses.",
   "main": "index.js",
   "scripts": {
