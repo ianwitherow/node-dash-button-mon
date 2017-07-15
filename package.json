@@ -1,0 +1,26 @@
+{
+  "name": "node-dash-button-mon",
+  "version": "0.0.6",
+  "description": "Uses a WiFi interface in monitor mode to listen to dash button presses.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianwitherow/node-dash-button-mon.git"
+  },
+  "keywords":[
+	  "amazon",
+	  "amazon-dash",
+	  "dash",
+	  "button",
+	  "wifi"
+  ],
+  "author": "Ian Witherow",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ianwitherow/node-dash-button-mon/issues"
+  },
+  "homepage": "https://github.com/ianwitherow/node-dash-button-mon#readme"
+}
