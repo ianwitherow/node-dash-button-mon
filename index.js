@@ -64,7 +64,7 @@ module.exports = (function() {
 		lines = lines.filter(l => l.length > 0);
 
 		lines.forEach(line => {
-			// See if an of our buttons have this MAC address
+			// See if any of our buttons have this MAC address
 			let button = buttons.find(b => b.mac_address.toLowerCase() === line.toLowerCase());
 
 			if (button) {
